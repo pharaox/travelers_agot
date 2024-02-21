@@ -1,0 +1,6 @@
+travl_can_travel_to_destination_trigger = {
+	NOR = {
+		location = title:b_ruins.title_province
+		$DESTINATION$ = title:b_ruins.title_province
+	}
+}
