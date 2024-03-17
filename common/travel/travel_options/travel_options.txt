@@ -264,7 +264,7 @@ hire_jungle_expert_option = {
 
 	owner_modifier = {
 		jungle_travel_danger = jungle_medium_danger_reduction
-		#AGOT added
+		#AGOT Added
 		minorroad_jungle_travel_danger = minorroad_jungle_medium_danger_reduction
 		majorroad_jungle_travel_danger = majorroad_jungle_medium_danger_reduction
 	}
@@ -374,6 +374,8 @@ hire_jungle_expert_option = {
 			limit = {
 				any_future_path_location = {
 					count >= 3
+					#AGOT Modified
+					#terrain = jungle
 					OR = {
 						terrain = jungle
 						terrain = minorroad_jungle
@@ -410,7 +412,7 @@ hire_mountaineer_option = {
 		mountains_travel_danger = mountains_medium_danger_reduction
 		desert_mountains_travel_danger = desert_mountains_medium_danger_reduction
 		hills_travel_danger = hills_medium_danger_reduction
-		#AGOT added
+		#AGOT Added
 		minorroad_mountains_travel_danger = minorroad_mountains_medium_danger_reduction
 		minorroad_desert_mountains_travel_danger = minorroad_desert_mountains_medium_danger_reduction
 		minorroad_hills_travel_danger = minorroad_hills_medium_danger_reduction
@@ -525,6 +527,7 @@ hire_mountaineer_option = {
 						terrain = mountains
 						terrain = desert_mountains
 						terrain = hills
+						#AGOT Added
 						terrain = majorroad_mountains
 						terrain = majorroad_desert_mountains
 						terrain = majorroad_hills
@@ -563,7 +566,7 @@ hire_forder_option = {
 	owner_modifier = {
 		wetlands_travel_danger = wetlands_medium_danger_reduction
 		floodplains_travel_danger = floodplains_medium_danger_reduction
-		#AGOT added
+		#AGOT Added
 		minorroad_wetlands_travel_danger = minorroad_wetlands_medium_danger_reduction
 		minorroad_floodplains_travel_danger = minorroad_floodplains_medium_danger_reduction
 		majorroad_wetlands_travel_danger = majorroad_wetlands_medium_danger_reduction
@@ -675,6 +678,7 @@ hire_forder_option = {
 					OR = {
 						terrain = wetlands
 						terrain = floodplains
+						#AGOT Added
 						terrain = majorroad_wetlands
 						terrain = majorroad_floodplains
 						terrain = minorroad_wetlands
@@ -826,6 +830,7 @@ hire_desert_warrior_option = {
 						terrain = desert
 						terrain = steppe
 						terrain = drylands
+						#AGOT Added
 						terrain = majorroad_desert
 						terrain = majorroad_steppe
 						terrain = majorroad_drylands
@@ -863,7 +868,7 @@ hire_rough_terrain_expert_option = {
 	owner_modifier = {
 		forest_travel_danger = forest_medium_danger_reduction
 		taiga_travel_danger = taiga_medium_danger_reduction
-		#AGOT added
+		#AGOT Added
 		minorroad_forest_travel_danger = minorroad_forest_medium_danger_reduction
 		minorroad_taiga_travel_danger = minorroad_taiga_medium_danger_reduction
 		majorroad_forest_travel_danger = majorroad_forest_medium_danger_reduction
@@ -975,6 +980,7 @@ hire_rough_terrain_expert_option = {
 					OR = {
 						terrain = forest
 						terrain = taiga
+						#AGOT Added
 						terrain = majorroad_forest
 						terrain = majorroad_taiga
 						terrain = minorroad_forest
@@ -986,6 +992,44 @@ hire_rough_terrain_expert_option = {
 				value = 100
 			}
 		}
+	}
+}
+
+court_physician_option = {
+	is_shown = {
+		is_ruler = yes
+		is_imprisoned = no # Travelers
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = court_physician_option_tt
+			exists = court_position:court_physician_court_position
+			court_position:court_physician_court_position = {
+				is_ai = yes
+			}
+		}
+	}
+	cost = {
+		gold = {
+			add = {
+				value = low_travel_option_cost
+				desc = court_physician_option
+			}
+		}
+	}
+
+	on_applied_effect = {
+		# The Court Physician always gets auto-added
+	}
+
+	owner_modifier = {
+		epidemic_travel_danger = epidemic_medium_danger_reduction
+	}
+	owner_modifier_description = court_physician_option_suffix
+
+	ai_will_do = {
+		value = 50
 	}
 }
 
