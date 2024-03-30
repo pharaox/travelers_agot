@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.2.1
+
+* Adapted to Travelers 0.7.x.
+
 ## Version 0.2.0
 
 * Adapted to CK3 1.12.x, Travelers 0.6.x and AGOT 0.2.2.x.

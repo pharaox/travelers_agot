@@ -2,7 +2,7 @@
 
 This is a [Travelers](https://steamcommunity.com/sharedfiles/filedetails/?id=3082182371) compatibility patch for [A Game of Thrones](https://steamcommunity.com/sharedfiles/filedetails/?id=2962333032). For an overview of features and other changes, see the [Travelers README](https://github.com/pharaox/travelers/blob/main/README.md).
 
-The latest version is compatible with CK3 1.12.x, Travelers 0.6.x, and AGOT 0.2.2.x.
+The latest version is compatible with CK3 1.12.x, Travelers 0.7.x, and AGOT 0.2.x.
 
 Load order:
 
