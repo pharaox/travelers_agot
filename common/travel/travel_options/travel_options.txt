@@ -148,7 +148,6 @@ hire_experienced_mercenaries_option = {
 			any_mercenary_company = {
 				is_mercenary_in_hire_range = root
 				mercenary_company_leader = {
-					is_available_at_peace_ai_adult = yes
 					is_travelling = no
 					is_at_war = no
 					is_in_army = no
@@ -182,7 +181,6 @@ hire_experienced_mercenaries_option = {
 				limit = {
 					is_mercenary_in_hire_range = root
 					mercenary_company_leader = {
-						is_available_at_peace_ai_adult = yes
 						is_travelling = no
 						is_at_war = no
 						is_in_army = no
@@ -1002,11 +1000,28 @@ court_physician_option = {
 	}
 
 	is_valid = {
-		custom_tooltip = {
-			text = court_physician_option_tt
-			exists = court_position:court_physician_court_position
-			court_position:court_physician_court_position = {
-				is_ai = yes
+		#AGOT Modified; OR
+		# custom_tooltip = {
+			# text = court_physician_option_tt
+			# exists = court_position:court_physician_court_position
+			# court_position:court_physician_court_position = {
+				# is_ai = yes
+			# }
+		# }
+		OR = {
+			custom_tooltip = {
+				text = court_physician_option_tt
+				exists = court_position:court_physician_court_position
+				court_position:court_physician_court_position = {
+					is_ai = yes
+				}
+			}
+			custom_tooltip = {
+				text = maester_option_tt
+				exists = court_position:maester_court_position
+				court_position:maester_court_position = {
+					is_ai = yes
+				}
 			}
 		}
 	}
