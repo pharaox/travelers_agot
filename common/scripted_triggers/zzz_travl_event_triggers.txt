@@ -71,3 +71,128 @@
 		}
 	}
 }
+
+travl_is_travel_danger_type_mountainous_terrain_trigger = {
+	OR = {
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = mountains
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = desert_mountains
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = highlands
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = glacier
+		}		
+	}
+}
+
+travl_is_travel_danger_type_hilly_terrain_trigger = {
+	OR = {
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = hills
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = highlands
+		}
+	}
+}
+
+travl_is_travel_danger_type_marshy_terrain_trigger = {
+	OR = {
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = wetlands
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = the_bog
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = taiga_bog
+		}
+	}
+}
+
+travl_is_travel_danger_type_flooded_terrain_trigger = {
+	agot_travel_danger_type_terrain = {
+		TRAVEL_PLAN = $TRAVEL_PLAN$
+		TERRAIN = floodplains
+	}
+}
+
+travl_is_travel_danger_type_forested_terrain_trigger = {
+	OR = {
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = forest
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = taiga
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = jungle
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = cloudforest
+		}
+	}
+}
+
+travl_is_travel_danger_type_dry_terrain_trigger = {
+	OR = {
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = desert
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = desert_mountains
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = drylands
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = steppe
+		}
+	}
+}
+
+travl_is_travel_danger_type_wet_terrain_trigger = {
+	OR = {
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = wetlands
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = jungle
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = the_bog
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = taiga_bog
+		}
+		agot_travel_danger_type_terrain = {
+			TRAVEL_PLAN = $TRAVEL_PLAN$
+			TERRAIN = cloudforest
+		}
+	}
+}
