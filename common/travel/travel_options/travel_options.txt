@@ -374,11 +374,7 @@ hire_jungle_expert_option = {
 					count >= 3
 					#AGOT Modified
 					#terrain = jungle
-					OR = {
-						terrain = jungle
-						terrain = minorroad_jungle
-						terrain = majorroad_jungle
-					}
+					agot_is_jungle_terrain = yes
 				}
 			}
 			add = {
@@ -408,15 +404,26 @@ hire_mountaineer_option = {
 
 	owner_modifier = {
 		mountains_travel_danger = mountains_medium_danger_reduction
+		#AGOT Added
+		majorroad_mountains_travel_danger = majorroad_mountains_medium_danger_reduction
+		minorroad_mountains_travel_danger = minorroad_mountains_medium_danger_reduction
 		desert_mountains_travel_danger = desert_mountains_medium_danger_reduction
+		#AGOT Added
+		majorroad_desert_mountains_travel_danger = majorroad_desert_mountains_medium_danger_reduction
+		minorroad_desert_mountains_travel_danger = minorroad_desert_mountains_medium_danger_reduction
 		hills_travel_danger = hills_medium_danger_reduction
 		#AGOT Added
-		minorroad_mountains_travel_danger = minorroad_mountains_medium_danger_reduction
-		minorroad_desert_mountains_travel_danger = minorroad_desert_mountains_medium_danger_reduction
-		minorroad_hills_travel_danger = minorroad_hills_medium_danger_reduction
-		majorroad_mountains_travel_danger = majorroad_mountains_medium_danger_reduction
-		majorroad_desert_mountains_travel_danger = majorroad_desert_mountains_medium_danger_reduction
 		majorroad_hills_travel_danger = majorroad_hills_medium_danger_reduction
+		minorroad_hills_travel_danger = minorroad_hills_medium_danger_reduction
+		glacier_travel_danger = glacier_medium_danger_reduction
+		majorroad_glacier_travel_danger = majorroad_glacier_medium_danger_reduction
+		minorroad_glacier_travel_danger = minorroad_glacier_medium_danger_reduction
+		canyon_travel_danger = canyon_medium_danger_reduction
+		majorroad_canyon_travel_danger = majorroad_canyon_medium_danger_reduction
+		minorroad_canyon_travel_danger = minorroad_canyon_medium_danger_reduction
+		highlands_travel_danger = highlands_medium_danger_reduction
+		majorroad_highlands_travel_danger = majorroad_highlands_medium_danger_reduction
+		minorroad_highlands_travel_danger = minorroad_highlands_medium_danger_reduction
 	}
 
 	on_applied_effect = {
@@ -522,16 +529,16 @@ hire_mountaineer_option = {
 				any_future_path_location = {
 					count >= 3
 					OR = {
-						terrain = mountains
-						terrain = desert_mountains
-						terrain = hills
-						#AGOT Added
-						terrain = majorroad_mountains
-						terrain = majorroad_desert_mountains
-						terrain = majorroad_hills
-						terrain = minorroad_mountains
-						terrain = minorroad_desert_mountains
-						terrain = minorroad_hills
+						#AGOT Modified
+						#terrain = mountains
+						#terrain = desert_mountains
+						#terrain = hills
+						agot_is_mountains_terrain = yes
+						agot_is_desert_mountains_terrain = yes
+						agot_is_hills_terrain = yes
+						agot_is_glacier_terrain = yes
+						agot_is_canyon_terrain = yes
+						agot_is_highlands_terrain = yes
 					}
 				}
 			}
@@ -563,12 +570,16 @@ hire_forder_option = {
 
 	owner_modifier = {
 		wetlands_travel_danger = wetlands_medium_danger_reduction
+		#AGOT Added
+		majorroad_wetlands_travel_danger = majorroad_wetlands_medium_danger_reduction
+		minorroad_wetlands_travel_danger = minorroad_wetlands_medium_danger_reduction
 		floodplains_travel_danger = floodplains_medium_danger_reduction
 		#AGOT Added
-		minorroad_wetlands_travel_danger = minorroad_wetlands_medium_danger_reduction
-		minorroad_floodplains_travel_danger = minorroad_floodplains_medium_danger_reduction
-		majorroad_wetlands_travel_danger = majorroad_wetlands_medium_danger_reduction
 		majorroad_floodplains_travel_danger = majorroad_floodplains_medium_danger_reduction
+		minorroad_floodplains_travel_danger = minorroad_floodplains_medium_danger_reduction
+		the_bog_travel_danger = the_bog_medium_danger_reduction
+		majorroad_the_bog_travel_danger = majorroad_the_bog_medium_danger_reduction
+		minorroad_the_bog_travel_danger = minorroad_the_bog_medium_danger_reduction
 	}
 
 	on_applied_effect = {
@@ -674,13 +685,12 @@ hire_forder_option = {
 				any_future_path_location = {
 					count >= 3
 					OR = {
-						terrain = wetlands
-						terrain = floodplains
-						#AGOT Added
-						terrain = majorroad_wetlands
-						terrain = majorroad_floodplains
-						terrain = minorroad_wetlands
-						terrain = minorroad_floodplains
+						#AGOT Modified
+						#terrain = wetlands
+						#terrain = floodplains
+						agot_is_wetlands_terrain = yes
+						agot_is_floodplains_terrain = yes
+						agot_is_the_bog_terrain = yes
 					}
 				}
 			}
@@ -711,15 +721,17 @@ hire_desert_warrior_option = {
 
 	owner_modifier = {
 		desert_travel_danger = desert_medium_danger_reduction
-		steppe_travel_danger = steppe_medium_danger_reduction
-		drylands_travel_danger = drylands_medium_danger_reduction
-		#AGOT added
-		minorroad_desert_travel_danger = minorroad_desert_medium_danger_reduction
-		minorroad_steppe_travel_danger = minorroad_steppe_medium_danger_reduction
-		minorroad_drylands_travel_danger = minorroad_drylands_medium_danger_reduction
+		#AGOT Added
 		majorroad_desert_travel_danger = majorroad_desert_medium_danger_reduction
+		minorroad_desert_travel_danger = minorroad_desert_medium_danger_reduction
+		steppe_travel_danger = steppe_medium_danger_reduction
+		#AGOT Added
 		majorroad_steppe_travel_danger = majorroad_steppe_medium_danger_reduction
+		minorroad_steppe_travel_danger = minorroad_steppe_medium_danger_reduction
+		drylands_travel_danger = drylands_medium_danger_reduction
+		#AGOT Added
 		majorroad_drylands_travel_danger = majorroad_drylands_medium_danger_reduction
+		minorroad_drylands_travel_danger = minorroad_drylands_medium_danger_reduction
 	}
 
 	on_applied_effect = {
@@ -825,16 +837,13 @@ hire_desert_warrior_option = {
 				any_future_path_location = {
 					count >= 3
 					OR = {
-						terrain = desert
-						terrain = steppe
-						terrain = drylands
-						#AGOT Added
-						terrain = majorroad_desert
-						terrain = majorroad_steppe
-						terrain = majorroad_drylands
-						terrain = minorroad_desert
-						terrain = minorroad_steppe
-						terrain = minorroad_drylands
+						#AGOT Modified
+						#terrain = desert
+						#terrain = steppe
+						#terrain = drylands
+						agot_is_desert_terrain = yes
+						agot_is_steppe_terrain = yes
+						agot_is_drylands_terrain = yes
 					}
 				}
 			}
@@ -865,12 +874,19 @@ hire_rough_terrain_expert_option = {
 
 	owner_modifier = {
 		forest_travel_danger = forest_medium_danger_reduction
+		#AGOT Added
+		majorroad_forest_travel_danger = majorroad_forest_medium_danger_reduction
+		minorroad_forest_travel_danger = minorroad_forest_medium_danger_reduction
 		taiga_travel_danger = taiga_medium_danger_reduction
 		#AGOT Added
-		minorroad_forest_travel_danger = minorroad_forest_medium_danger_reduction
-		minorroad_taiga_travel_danger = minorroad_taiga_medium_danger_reduction
-		majorroad_forest_travel_danger = majorroad_forest_medium_danger_reduction
 		majorroad_taiga_travel_danger = majorroad_taiga_medium_danger_reduction
+		minorroad_taiga_travel_danger = minorroad_taiga_medium_danger_reduction
+		cloudforest_travel_danger = cloudforest_medium_danger_reduction
+		majorroad_cloudforest_travel_danger = majorroad_cloudforest_medium_danger_reduction
+		minorroad_cloudforest_travel_danger = minorroad_cloudforest_medium_danger_reduction
+		taiga_bog_travel_danger = taiga_bog_medium_danger_reduction
+		majorroad_taiga_bog_travel_danger = majorroad_taiga_bog_medium_danger_reduction
+		minorroad_taiga_bog_travel_danger = minorroad_taiga_bog_medium_danger_reduction
 	}
 
 	on_applied_effect = {
@@ -976,13 +992,13 @@ hire_rough_terrain_expert_option = {
 				any_future_path_location = {
 					count >= 3
 					OR = {
-						terrain = forest
-						terrain = taiga
-						#AGOT Added
-						terrain = majorroad_forest
-						terrain = majorroad_taiga
-						terrain = minorroad_forest
-						terrain = minorroad_taiga
+						#AGOT Modified
+						#terrain = forest
+						#terrain = taiga
+						agot_is_forest_terrain = yes
+						agot_is_taiga_terrain = yes
+						agot_is_cloudforest_terrain = yes
+						agot_is_taiga_bog_terrain = yes
 					}
 				}
 			}
