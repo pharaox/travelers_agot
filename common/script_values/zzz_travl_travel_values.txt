@@ -1,0 +1,7 @@
+﻿travl_travel_danger_value = {
+	value = root.current_travel_plan.current_danger_value
+	subtract = root.current_travel_plan.travel_safety
+	divide = 2
+	min = define:NTravel|TRAVEL_DANGER_MINIMUM
+	max = 100
+}

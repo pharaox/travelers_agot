@@ -198,7 +198,7 @@ travel_danger_events_on_action = {
 					add = root.current_travel_plan.travel_safety
 				}
 				#AGOT Added
-				divide = 3
+				divide = 2
 				add = 100
 			}
 			max = {
@@ -284,7 +284,7 @@ travel_events_on_action = {
 		chance_of_no_event = {
 			#AGOT Modified, increased travel speed caused events to fire rapidly in succession
 			#value = 80
-			value = 94
+			value = 90
 		}
 		100 = 0
 		5 = travel_events.1000 #Peasant with no shoes
