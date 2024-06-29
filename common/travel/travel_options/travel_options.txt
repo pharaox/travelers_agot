@@ -2,6 +2,8 @@
 	is_shown = {
    		is_ruler = yes
 		is_imprisoned = no # Travelers
+		#AGOT Added, not available for NW
+		NOT = { has_trait = nightswatch }
 	}
 
 	is_valid = {
@@ -140,6 +142,8 @@ hire_experienced_mercenaries_option = {
 	is_shown = {
    		is_ruler = yes
 		is_imprisoned = no # Travelers
+		#AGOT Added, not available for NW
+		NOT = { has_trait = nightswatch }
 	}
 
 	is_valid = {
@@ -246,6 +250,8 @@ hire_jungle_expert_option = {
 	is_shown = {
 		is_ruler = yes
 		is_imprisoned = no # Travelers
+		#AGOT Added, not available for NW
+		NOT = { has_trait = nightswatch }
 	}
 
 	is_valid = {
@@ -388,6 +394,8 @@ hire_mountaineer_option = {
 	is_shown = {
 		is_ruler = yes
 		is_imprisoned = no # Travelers
+		#AGOT Added, not available for NW
+		NOT = { has_trait = nightswatch }
 	}
 
 	is_valid = {
@@ -553,6 +561,8 @@ hire_forder_option = {
 	is_shown = {
 		is_ruler = yes
 		is_imprisoned = no # Travelers
+		#AGOT Added, not available for NW
+		NOT = { has_trait = nightswatch }
 	}
 
 	is_valid = {
@@ -705,6 +715,8 @@ hire_desert_warrior_option = {
 	is_shown = {
 		is_ruler = yes
 		is_imprisoned = no # Travelers
+		#AGOT Added, not available for NW
+		NOT = { has_trait = nightswatch }
 	}
 
 	is_valid = {
@@ -858,6 +870,8 @@ hire_rough_terrain_expert_option = {
 	is_shown = {
 		is_ruler = yes
 		is_imprisoned = no # Travelers
+		#AGOT Added, not available for NW
+		NOT = { has_trait = nightswatch }
 	}
 
 	is_valid = {
@@ -1068,6 +1082,8 @@ cultural_ambassador_option = {
 	is_shown = {
 		is_ruler = yes
 		is_imprisoned = no # Travelers
+		#AGOT Added, not available for NW
+		NOT = { has_trait = nightswatch }
 	}
 
 	is_valid = {
