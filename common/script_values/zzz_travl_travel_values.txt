@@ -5,3 +5,7 @@
 	min = define:NTravel|TRAVEL_DANGER_MINIMUM
 	max = 100
 }
+
+travl_prisoner_event_chance_value = {
+	value = 5
+}
