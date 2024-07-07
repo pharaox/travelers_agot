@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.2.4
+
+* Rebalanced prisoner travel events to be 2 times less likely than in vanilla.
+
 ## Version 0.2.3
 
 * Adapted to AGOT 0.2.11.
