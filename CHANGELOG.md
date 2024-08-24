@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.3.0
+
+* Adapted to AGOT 0.3.0 and Travelers 0.7.8.
+
 ## Version 0.2.4
 
 * Rebalanced prisoner travel events to be 2 times less likely than in vanilla.
