@@ -184,6 +184,16 @@ vanilla_on_travel_plan_movement = {
 }
 
 travel_danger_events_on_action = {
+	# AGOT Added
+	trigger = {
+		NOR = {
+			current_travel_plan ?= {
+				has_travel_option = dragon_flight_option
+			}
+			has_trait = dragon
+		}
+	}
+
 	random_events = {
 		chance_of_no_event = {
 			value = {
@@ -261,6 +271,8 @@ travel_danger_events_on_action = {
 		100 = travel_events.2106 # Danger! You get attacked while passing through a capital province; will the Province Owner help you?
 		100 = travel_events.4020 # Danger! Strong believers harass your caravan and demand payment
 		100 = travel_events.4003 # You encounter vikings at sea
+		#AGOT Added
+		200 = agot_travel_events.2000 # AMBUSHED
 	}
 }
 
@@ -399,6 +411,16 @@ travel_events_on_action = {
 }
 
 travel_event_tombola = {
+	# AGOT Added
+	trigger = {
+		NOR = {
+			current_travel_plan ?= {
+				has_travel_option = dragon_flight_option
+			}
+			has_trait = dragon
+		}
+	}
+
 	random_on_action = {
 		1 = travel_events_on_action
 		2 = on_tour_travel
@@ -655,6 +677,8 @@ vanilla_on_travel_plan_start = {
 		travel_start_event.1070 #Travelling to a Hunt
 		travel_start_event.1080 #Travelling to a Witch Ritual
 		diarchy.0002 # Do we need to enter a regency or not?
+		#AGOT Added
+		agot_travel_events_dragon.9000
 	}
 }
 
@@ -731,6 +755,42 @@ vanilla_on_travel_plan_complete = {
 			limit = { is_ai = no }
 			ep2_im_in_my_elements_terrain_grabber_effect = yes
 		}
+		# AGOT Added
+		# If the dragon was taken from the dragonpit, send them back
+		if = {
+			limit = {
+				current_travel_plan = {
+					has_travel_option = dragon_flight_option
+				}
+			}
+			var:current_dragon = {
+				save_scope_as = dragon
+				if = {
+					limit = { has_variable = travelling_from_pit }
+					agot_send_to_dragonpit_no_event = {
+						DRAGON = scope:dragon
+						DRAGONPIT_COUNTY = var:travelling_from_pit
+					}
+				}
+			}
+			current_travel_plan = {
+				every_entourage_character = {
+					limit = {
+						is_current_dragonrider = yes
+					}
+					var:current_dragon = {
+						save_scope_as = dragon
+						if = {
+							limit = { has_variable = travelling_from_pit }
+							agot_send_to_dragonpit_no_event = {
+								DRAGON = scope:dragon
+								DRAGONPIT_COUNTY = var:travelling_from_pit
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -768,6 +828,42 @@ vanilla_on_travel_plan_abort = {
 				exists = var:travel_plan_start_date
 			}
 			remove_variable = travel_plan_start_date
+		}
+		# AGOT Added
+		# If the dragon was taken from the dragonpit, send them back
+		if = {
+			limit = {
+				current_travel_plan = {
+					has_travel_option = dragon_flight_option
+				}
+			}
+			var:current_dragon = {
+				save_scope_as = dragon
+				if = {
+					limit = { has_variable = travelling_from_pit }
+					agot_send_to_dragonpit_no_event = {
+						DRAGON = scope:dragon
+						DRAGONPIT_COUNTY = var:travelling_from_pit
+					}
+				}
+			}
+			current_travel_plan = {
+				every_entourage_character = {
+					limit = {
+						is_current_dragonrider = yes
+					}
+					var:current_dragon = {
+						save_scope_as = dragon
+						if = {
+							limit = { has_variable = travelling_from_pit }
+							agot_send_to_dragonpit_no_event = {
+								DRAGON = scope:dragon
+								DRAGONPIT_COUNTY = var:travelling_from_pit
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -890,6 +986,42 @@ vanilla_on_travel_plan_cancel = {
 			clear_variable_list = possible_rites
 			add_character_flag = unproven_adult_flag #flag to be able to take the decision again
 		}
+		# AGOT Added
+		# If the dragon was taken from the dragonpit, send them back
+		if = {
+			limit = {
+				current_travel_plan = {
+					has_travel_option = dragon_flight_option
+				}
+			}
+			var:current_dragon = {
+				save_scope_as = dragon
+				if = {
+					limit = { has_variable = travelling_from_pit }
+					agot_send_to_dragonpit_no_event = {
+						DRAGON = scope:dragon
+						DRAGONPIT_COUNTY = var:travelling_from_pit
+					}
+				}
+			}
+			current_travel_plan = {
+				every_entourage_character = {
+					limit = {
+						is_current_dragonrider = yes
+					}
+					var:current_dragon = {
+						save_scope_as = dragon
+						if = {
+							limit = { has_variable = travelling_from_pit }
+							agot_send_to_dragonpit_no_event = {
+								DRAGON = scope:dragon
+								DRAGONPIT_COUNTY = var:travelling_from_pit
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -941,6 +1073,13 @@ on_travel_leader_removed = {
 vanilla_on_travel_leader_removed = {
 	trigger = {
 		is_landed = yes
+		#AGOT Added
+		NOR = {
+			current_travel_plan ?= {
+				has_travel_option = dragon_flight_option
+			}
+			has_trait = dragon
+		}
 		is_imprisoned = no # Travelers
 		NOT = { exists = current_travel_plan.travel_leader }
 		# Travelers-FF
