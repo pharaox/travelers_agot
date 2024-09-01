@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 0.3.1
+
+### Bug Fixes
+
+* Dragons now teleport instead of traveling.
+
 ## Version 0.3.0
 
 * Adapted to AGOT 0.3.0 and Travelers 0.7.8.

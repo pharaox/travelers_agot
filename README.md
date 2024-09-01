@@ -17,6 +17,7 @@ Travelers is already largely compatible with most mods due to its design. This c
 * Reconciles changes to  `travl_on_actions.txt` and `travel_options.txt` vanilla files by both mods. The main effect is that imprisoned rulers traveling to their jailor's capital can't have entourages or add travel options, and don't get any vanilla or AGOT travel events, as intended.
 * Ensures that the new travel danger events for non-ruler characters use the new AGOT terrain types.
 * Ensures Travelers doesn't start travel to or from unreachable locations, such as "Ruins".
+* Ensures that dragons teleport instead of traveling as they have special logic to ensure they stay in their pit or follow their rider.
 
 ## Links
 
