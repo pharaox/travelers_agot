@@ -450,7 +450,7 @@ vanilla_on_travel_plan_movement = {
 					type = send_interface_message_good
 					title = adventurers_proselytize_zealously_option.title
 					left_icon = scope:wanderer_to_convert
-					add_piety = minor_piety_value
+					add_piety = miniscule_piety_value
 					scope:wanderer_to_convert = {
 						set_character_faith = root.faith
 					}
@@ -1119,6 +1119,21 @@ vanilla_on_travel_plan_start = {
 				clear_variable_list = ep2_im_in_my_elements_achievement_terrain_list
 				ep2_im_in_my_elements_terrain_grabber_effect = yes
 			}
+			#AGOT Added
+			if = {
+				limit = {
+					is_landless_nw_character = yes
+					current_travel_plan = {
+						any_entourage_character = { has_court_position = travel_leader_court_position }
+					}
+				}
+				random_court_position_holder = {
+					type = travel_leader_court_position
+					limit = { is_travel_entourage_character = yes }
+					save_scope_as = travel_leader
+				}
+				ranger_travel_gold_compensation = yes
+			}
 		}
 		else = {
 			if = {
@@ -1244,6 +1259,8 @@ on_travel_plan_complete = {
 vanilla_on_travel_plan_complete = {
 	trigger = {
 		is_ruler = yes
+		#AGOT Added
+		NOT = { has_character_flag = never_return }
 		is_imprisoned = no # Travelers
 		current_travel_plan ?= {
 			NOT = { has_travel_plan_modifier = travl_is_imprisoned_modifier }
