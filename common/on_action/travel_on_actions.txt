@@ -567,7 +567,7 @@ vanilla_on_travel_plan_movement = {
 travel_danger_events_on_action = {
 	trigger = {
 		is_migrating = no # No Danger events while migrating
-		# AGOT Added
+		#AGOT Added
 		NOR = {
 			current_travel_plan ?= {
 				has_travel_option = dragon_flight_option
@@ -947,7 +947,7 @@ migration_events_on_action = {
 }
 
 travel_event_tombola = {
-	# AGOT Added
+	#AGOT Added
 	trigger = {
 		NOR = {
 			current_travel_plan ?= {
@@ -999,7 +999,7 @@ vanilla_on_travel_plan_arrival = {
 	}
 	effect = {
 		#travl_debug_log_event_effect = { MSG = travl_debug_msg_travel_on_action_fired EVENT = on_travel_plan_arrival }
-		# AGOT Added
+		#AGOT Added
 		# Share bastard secret event if at same location (if valid)
 		trigger_event = agot_events_bastard.0917
 		# Achievements.
@@ -1232,7 +1232,7 @@ vanilla_on_travel_plan_start = {
 				}
 				ranger_travel_gold_compensation = yes
 			}
-			# AGOT Added
+			#AGOT Added
 			if = {
 				limit = {
 					employs_court_position = bloodrider_court_position
@@ -1260,7 +1260,7 @@ vanilla_on_travel_plan_start = {
 					add_companion = scope:bloodrider
 				}
 			}
-			# AGOT Added
+			#AGOT Added
 			if = {
 				limit = {
 					employs_court_position = first_sword_court_position
@@ -1357,7 +1357,7 @@ vanilla_on_travel_plan_start = {
 		# fishery yurt modifier
 		if = {
 			limit = {
-				government_has_flag = government_is_nomadic # Travelers: Fix missing nomadic_government
+				government_has_flag = government_is_nomadic
 				domicile ?= {
 					has_domicile_building_or_higher = fishing_yurt_01
 				}
@@ -1714,7 +1714,7 @@ vanilla_on_travel_plan_complete = {
 		# fishery yurt modifier
 		if = {
 			limit = {
-				government_has_flag = government_is_nomadic # Travelers: Fix missing nomadic_government
+				government_has_flag = government_is_nomadic
 				domicile ?= {
 					has_domicile_building_or_higher = fishing_yurt_01
 				}
@@ -1752,7 +1752,7 @@ vanilla_on_travel_plan_complete = {
 			}
 			trigger_event = laamp_base_learning_contract_events.4017
 		}
-		# AGOT Added
+		#AGOT Added
 		# If the dragon was taken from the dragonpit, send them back
 		if = {
 			limit = {
@@ -1894,7 +1894,7 @@ vanilla_on_travel_plan_abort = {
 		# Invalidating travels to a Nomadic Settlement Contract
 		mpo_invalidating_settlement_contract_effect = yes
 
-		# AGOT Added
+		#AGOT Added
 		# If the dragon was taken from the dragonpit, send them back
 		if = {
 			limit = {
@@ -2047,7 +2047,7 @@ vanilla_on_travel_plan_cancel = {
 		# Invalidating travels to a Nomadic Settlement Contract
 		mpo_invalidating_settlement_contract_effect = yes
 
-		# AGOT Added
+		#AGOT Added
 		# If the dragon was taken from the dragonpit, send them back
 		if = {
 			limit = {

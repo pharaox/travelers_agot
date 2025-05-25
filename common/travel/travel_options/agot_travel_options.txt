@@ -1,5 +1,4 @@
-﻿# AGOT Added
-dragon_flight_option = {
+﻿dragon_flight_option = {
 	is_shown = {
 		has_trait = dragonrider
 		is_imprisoned = no # Travelers
@@ -20,7 +19,7 @@ dragon_flight_option = {
 		}
 	}
 
-	cost = {  # For feeding and housing at destination
+	cost = { # For feeding and housing at destination
 		gold = {
 			add = {
 				value = low_travel_option_cost
@@ -73,7 +72,7 @@ dragon_flight_option = {
 		}
 	}
 
-	ai_will_do = {  # no (for now)
+	ai_will_do = { # no (for now)
 		value = 0
 	}
 }

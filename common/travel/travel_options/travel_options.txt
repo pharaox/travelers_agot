@@ -202,6 +202,24 @@ purchase_rough_terrain_gear_option = {
 		hills_travel_danger = hills_low_danger_reduction
 		wetlands_travel_danger = wetlands_low_danger_reduction
 		floodplains_travel_danger = floodplains_low_danger_reduction
+		#AGOT Added
+		majorroad_mountains_travel_danger = mountains_low_danger_reduction
+		minorroad_mountains_travel_danger = mountains_low_danger_reduction
+		majorroad_hills_travel_danger = hills_low_danger_reduction
+		minorroad_hills_travel_danger = hills_low_danger_reduction
+		majorroad_wetlands_travel_danger = wetlands_low_danger_reduction
+		minorroad_wetlands_travel_danger = wetlands_low_danger_reduction
+		majorroad_floodplains_travel_danger = floodplains_low_danger_reduction
+		minorroad_floodplains_travel_danger = floodplains_low_danger_reduction
+		desert_mountains_travel_danger = desert_mountains_medium_danger_reduction
+		majorroad_desert_mountains_travel_danger = majorroad_desert_mountains_medium_danger_reduction
+		minorroad_desert_mountains_travel_danger = minorroad_desert_mountains_medium_danger_reduction
+		the_bog_travel_danger = the_bog_medium_danger_reduction
+		majorroad_the_bog_travel_danger = majorroad_the_bog_medium_danger_reduction
+		minorroad_the_bog_travel_danger = minorroad_the_bog_medium_danger_reduction
+		taiga_bog_travel_danger = taiga_bog_medium_danger_reduction
+		majorroad_taiga_bog_travel_danger = majorroad_taiga_bog_medium_danger_reduction
+		minorroad_taiga_bog_travel_danger = minorroad_taiga_bog_medium_danger_reduction
 	}
 
 	on_applied_effect = {
@@ -262,6 +280,15 @@ purchase_desert_gear_option = {
 		steppe_travel_danger = steppe_low_danger_reduction
 		drylands_travel_danger = drylands_low_danger_reduction
 		desert_mountains_travel_danger = desert_mountains_low_danger_reduction
+		#AGOT Added
+		majorroad_desert_travel_danger = desert_low_danger_reduction
+		minorroad_desert_travel_danger = desert_low_danger_reduction
+		majorroad_steppe_travel_danger = steppe_low_danger_reduction
+		minorroad_steppe_travel_danger = steppe_low_danger_reduction
+		majorroad_drylands_travel_danger = drylands_low_danger_reduction
+		minorroad_drylands_travel_danger = drylands_low_danger_reduction
+		majorroad_desert_mountains_travel_danger = desert_mountains_low_danger_reduction
+		minorroad_desert_mountains_travel_danger = desert_mountains_low_danger_reduction
 	}
 
 	on_applied_effect = {
@@ -317,6 +344,13 @@ purchase_forest_gear_option = {
 		forest_travel_danger = forest_low_danger_reduction
 		taiga_travel_danger = taiga_low_danger_reduction
 		jungle_travel_danger = jungle_low_danger_reduction
+		#AGOT Added
+		majorroad_forest_travel_danger = forest_low_danger_reduction
+		minorroad_forest_travel_danger = forest_low_danger_reduction
+		majorroad_taiga_travel_danger = taiga_low_danger_reduction
+		minorroad_taiga_travel_danger = taiga_low_danger_reduction
+		majorroad_jungle_travel_danger = jungle_low_danger_reduction
+		minorroad_jungle_travel_danger = jungle_low_danger_reduction
 	}
 
 	on_applied_effect = {
@@ -835,15 +869,13 @@ hire_mountaineer_option = {
 
 	owner_modifier = {
 		mountains_travel_danger = mountains_medium_danger_reduction
+		desert_mountains_travel_danger = desert_mountains_medium_danger_reduction
+		hills_travel_danger = hills_medium_danger_reduction
 		#AGOT Added
 		majorroad_mountains_travel_danger = majorroad_mountains_medium_danger_reduction
 		minorroad_mountains_travel_danger = minorroad_mountains_medium_danger_reduction
-		desert_mountains_travel_danger = desert_mountains_medium_danger_reduction
-		#AGOT Added
 		majorroad_desert_mountains_travel_danger = majorroad_desert_mountains_medium_danger_reduction
 		minorroad_desert_mountains_travel_danger = minorroad_desert_mountains_medium_danger_reduction
-		hills_travel_danger = hills_medium_danger_reduction
-		#AGOT Added
 		majorroad_hills_travel_danger = majorroad_hills_medium_danger_reduction
 		minorroad_hills_travel_danger = minorroad_hills_medium_danger_reduction
 		glacier_travel_danger = glacier_medium_danger_reduction
@@ -1022,11 +1054,10 @@ hire_forder_option = {
 
 	owner_modifier = {
 		wetlands_travel_danger = wetlands_medium_danger_reduction
+		floodplains_travel_danger = floodplains_medium_danger_reduction
 		#AGOT Added
 		majorroad_wetlands_travel_danger = majorroad_wetlands_medium_danger_reduction
 		minorroad_wetlands_travel_danger = minorroad_wetlands_medium_danger_reduction
-		floodplains_travel_danger = floodplains_medium_danger_reduction
-		#AGOT Added
 		majorroad_floodplains_travel_danger = majorroad_floodplains_medium_danger_reduction
 		minorroad_floodplains_travel_danger = minorroad_floodplains_medium_danger_reduction
 		the_bog_travel_danger = the_bog_medium_danger_reduction
@@ -1194,15 +1225,13 @@ hire_desert_warrior_option = {
 
 	owner_modifier = {
 		desert_travel_danger = desert_medium_danger_reduction
+		steppe_travel_danger = steppe_medium_danger_reduction
+		drylands_travel_danger = drylands_medium_danger_reduction
 		#AGOT Added
 		majorroad_desert_travel_danger = majorroad_desert_medium_danger_reduction
 		minorroad_desert_travel_danger = minorroad_desert_medium_danger_reduction
-		steppe_travel_danger = steppe_medium_danger_reduction
-		#AGOT Added
 		majorroad_steppe_travel_danger = majorroad_steppe_medium_danger_reduction
 		minorroad_steppe_travel_danger = minorroad_steppe_medium_danger_reduction
-		drylands_travel_danger = drylands_medium_danger_reduction
-		#AGOT Added
 		majorroad_drylands_travel_danger = majorroad_drylands_medium_danger_reduction
 		minorroad_drylands_travel_danger = minorroad_drylands_medium_danger_reduction
 	}
@@ -1368,11 +1397,10 @@ hire_rough_terrain_expert_option = {
 
 	owner_modifier = {
 		forest_travel_danger = forest_medium_danger_reduction
+		taiga_travel_danger = taiga_medium_danger_reduction
 		#AGOT Added
 		majorroad_forest_travel_danger = majorroad_forest_medium_danger_reduction
 		minorroad_forest_travel_danger = minorroad_forest_medium_danger_reduction
-		taiga_travel_danger = taiga_medium_danger_reduction
-		#AGOT Added
 		majorroad_taiga_travel_danger = majorroad_taiga_medium_danger_reduction
 		minorroad_taiga_travel_danger = minorroad_taiga_medium_danger_reduction
 		cloudforest_travel_danger = cloudforest_medium_danger_reduction
