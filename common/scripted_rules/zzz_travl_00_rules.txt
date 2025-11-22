@@ -15,32 +15,25 @@ can_command_troops_now = {
 # Root is the potential knight
 can_be_knight = {
 	#AGOT Modified, capture army owner and allow player knights
-	#trigger_if = {
-	#	limit = {
-	#		OR = {
-	#			is_landed = no
-	#			root = root.court_owner 
-	#		}
-	#		NOT = { exists = liege } 
-	#	}
-	#	can_be_knight_trigger = { ARMY_OWNER = root.court_owner }
-	#}
-	# trigger_else = {
+	# trigger_if = {
+	# 	limit = {
+	# 		exists = liege
+	# 	}
 	# 	can_be_knight_trigger = { ARMY_OWNER = liege }
+	# }
+	# trigger_else = {
+	# 	can_be_knight_trigger = { ARMY_OWNER = root.court_owner }
 	# }
 	trigger_if = {
 		limit = {
-			OR = {
-				is_playable_character = no
-				root = root.court_owner
-			}
-			NOT = { exists = liege }
+			exists = liege
 		}
-		root.court_owner = { save_temporary_scope_as = army_owner }
-	}
-	trigger_else = {
 		liege = { save_temporary_scope_as = army_owner }
 	}
+	trigger_else = {
+		root.court_owner = { save_temporary_scope_as = army_owner }
+	}
+
 	trigger_if = {
 		limit = {
 			OR = {

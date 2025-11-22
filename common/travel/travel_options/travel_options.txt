@@ -1,23 +1,23 @@
 ﻿adventurers_scout_for_talent_option = {
 	is_shown = {
-   		is_landless_adventurer = yes
+   		has_government = landless_adventurer_government
 		NOT = { has_perk = toe_the_line_perk }
 		is_imprisoned = no # Travelers
 	}
 
 	is_valid = {
 		NOT = { has_perk = toe_the_line_perk }
-		is_landless_adventurer = yes
+		has_government = landless_adventurer_government
 	}
-
+	
 	travel_modifier = {
 		travel_speed = -5
 	}
-
+	
 	on_applied_effect = {
 		custom_tooltip = adventurers_scout_for_talent_option.tt
 	}
-
+	
 	ai_will_do = {
 		value = 100
 	}
@@ -25,23 +25,23 @@
 
 adventurers_make_local_deals_option = {
 	is_shown = {
-   		is_landless_adventurer = yes
+   		has_government = landless_adventurer_government
 		is_imprisoned = no # Travelers
 	}
 
 	is_valid = {
 		has_perk = fearful_troops_perk
-		is_landless_adventurer = yes
+		has_government = landless_adventurer_government
 	}
-
+	
 	travel_modifier = {
 		travel_safety = -20
 	}
-
+	
 	on_applied_effect = {
 		custom_tooltip = adventurers_make_local_deals_option.tt
 	}
-
+	
 	ai_will_do = {
 		value = 100
 	}
@@ -49,24 +49,24 @@ adventurers_make_local_deals_option = {
 
 adventurers_search_for_secrets_option = {
 	is_shown = {
-   		is_landless_adventurer = yes
+   		has_government = landless_adventurer_government
 		is_imprisoned = no # Travelers
 	}
 
 	is_valid = {
 		has_perk = digging_for_dirt_perk
-		is_landless_adventurer = yes
+		has_government = landless_adventurer_government
 	}
-
+	
 	travel_modifier = {
 		travel_safety = -10
 		travel_speed = 10
 	}
-
+	
 	on_applied_effect = {
 		custom_tooltip = adventurers_search_for_secrets_option.tt
 	}
-
+	
 	ai_will_do = {
 		value = 100
 	}
@@ -74,7 +74,7 @@ adventurers_search_for_secrets_option = {
 
 adventurers_encourage_relationships_option = {
 	is_shown = {
-   		is_landless_adventurer = yes
+   		has_government = landless_adventurer_government
 		is_imprisoned = no # Travelers
 	}
 
@@ -84,18 +84,18 @@ adventurers_encourage_relationships_option = {
 			is_adult = yes
 			count >= 3
 		}
-		is_landless_adventurer = yes
+		has_government = landless_adventurer_government
 	}
-
+	
 	travel_modifier = {
 		travel_speed = 5
 		travel_safety = -5
 	}
-
+	
 	on_applied_effect = {
 		custom_tooltip = adventurers_encourage_relationships_option.tt
 	}
-
+	
 	ai_will_do = {
 		value = 100
 	}
@@ -103,24 +103,24 @@ adventurers_encourage_relationships_option = {
 
 adventurers_gather_inspiration_option = {
 	is_shown = {
-   		is_landless_adventurer = yes
+   		has_government = landless_adventurer_government
 		is_imprisoned = no # Travelers
 	}
 
 	is_valid = {
 		has_perk = popular_figurehead_perk
-		is_landless_adventurer = yes
+		has_government = landless_adventurer_government
 	}
-
+	
 	travel_modifier = {
 		travel_speed = 5
 		travel_safety = -5
 	}
-
+	
 	on_applied_effect = {
 		custom_tooltip = adventurers_gather_inspiration_option.tt
 	}
-
+	
 	ai_will_do = {
 		value = 100
 	}
@@ -128,24 +128,24 @@ adventurers_gather_inspiration_option = {
 
 adventurers_proselytize_zealously_option = {
 	is_shown = {
-   		is_landless_adventurer = yes
+   		has_government = landless_adventurer_government
 		is_imprisoned = no # Travelers
 	}
 
 	is_valid = {
 		has_perk = zealous_proselytizer_perk
-		is_landless_adventurer = yes
+		has_government = landless_adventurer_government
 	}
-
+	
 	travel_modifier = {
 		travel_speed = 5
 		travel_safety = -5
 	}
-
+	
 	on_applied_effect = {
 		custom_tooltip = adventurers_proselytize_zealously_option.tt
 	}
-
+	
 	ai_will_do = {
 		value = 100
 	}
@@ -153,7 +153,7 @@ adventurers_proselytize_zealously_option = {
 
 adventurers_forward_scouts_option = {
 	is_shown = {
-   		is_landless_adventurer = yes
+   		has_government = landless_adventurer_government
 		is_imprisoned = no # Travelers
 	}
 
@@ -163,15 +163,15 @@ adventurers_forward_scouts_option = {
 			domicile ?= { has_domicile_parameter = camp_unlocks_forward_scouts }
 		}
 	}
-
+	
 	travel_modifier = {
 		travel_safety = 20
 		travel_speed = -5
 	}
-
+	
 	on_applied_effect = {
 	}
-
+	
 	ai_will_do = {
 		value = 100
 	}
@@ -180,19 +180,19 @@ adventurers_forward_scouts_option = {
 purchase_rough_terrain_gear_option = {
 	is_shown = {
 		is_ruler = yes
-		is_landless_adventurer = yes
+		has_government = landless_adventurer_government
 		is_imprisoned = no # Travelers
 	}
 
 	is_valid = {
-		is_landless_adventurer = yes
+		has_government = landless_adventurer_government
 	}
-
+	
 	cost = {
 		gold = {
 			add = {
 				value = low_travel_option_cost
-				desc = purchase_rough_terrain_gear_option # Travelers
+				desc = purchase_rough_terrain_gear_option #Unop: Was purchase_mountaineer_gear_option
 			}
 		}
 	}
@@ -221,10 +221,10 @@ purchase_rough_terrain_gear_option = {
 		majorroad_taiga_bog_travel_danger = majorroad_taiga_bog_medium_danger_reduction
 		minorroad_taiga_bog_travel_danger = minorroad_taiga_bog_medium_danger_reduction
 	}
-
+	
 	on_applied_effect = {
 	}
-
+	
 	ai_will_do = {
 		value = 0
 		if = {
@@ -258,14 +258,14 @@ purchase_rough_terrain_gear_option = {
 purchase_desert_gear_option = {
 	is_shown = {
 		is_ruler = yes
-		is_landless_adventurer = yes
+		has_government = landless_adventurer_government
 		is_imprisoned = no # Travelers
 	}
 
 	is_valid = {
-		is_landless_adventurer = yes
+		has_government = landless_adventurer_government
 	}
-
+	
 	cost = {
 		gold = {
 			add = {
@@ -290,10 +290,10 @@ purchase_desert_gear_option = {
 		majorroad_desert_mountains_travel_danger = desert_mountains_low_danger_reduction
 		minorroad_desert_mountains_travel_danger = desert_mountains_low_danger_reduction
 	}
-
+	
 	on_applied_effect = {
 	}
-
+	
 	ai_will_do = {
 		value = 0
 		if = {
@@ -323,19 +323,19 @@ purchase_desert_gear_option = {
 purchase_forest_gear_option = {
 	is_shown = {
 		is_ruler = yes
-		is_landless_adventurer = yes
+		has_government = landless_adventurer_government
 		is_imprisoned = no # Travelers
 	}
 
 	is_valid = {
-		is_landless_adventurer = yes
+		has_government = landless_adventurer_government
 	}
-
+	
 	cost = {
 		gold = {
 			add = {
 				value = low_travel_option_cost
-				desc = purchase_rough_terrain_gear_option
+				desc = purchase_forest_gear_option #Unop: Was purchase_rough_terrain_gear_option
 			}
 		}
 	}
@@ -352,10 +352,10 @@ purchase_forest_gear_option = {
 		majorroad_jungle_travel_danger = jungle_low_danger_reduction
 		minorroad_jungle_travel_danger = jungle_low_danger_reduction
 	}
-
+	
 	on_applied_effect = {
 	}
-
+	
 	ai_will_do = {
 		value = 0
 		if = {
@@ -390,18 +390,34 @@ experienced_captains_option = {
 
 	is_valid = {
 	}
-
+	
 	cost = {
 		gold = {
-			add = {
-				value = medium_travel_option_cost
-				if = {
-					limit = {
-						government_has_flag = government_is_nomadic
-					}
-					multiply = 0.5
+			if = {
+				limit = {
+					has_treasury = no
 				}
-				desc = experienced_captains_option
+				add = {
+					value = medium_travel_option_cost
+					if = {
+						limit = {
+							government_has_flag = government_is_nomadic
+						}
+						multiply = 0.5
+					}
+					desc = experienced_captains_option
+				}
+			}
+		}
+		treasury = {
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = {
+					value = medium_travel_option_cost
+					desc = experienced_captains_option
+				}
 			}
 		}
 		herd = {
@@ -421,15 +437,12 @@ experienced_captains_option = {
 		coastal_sea_travel_danger = medium_sea_danger_reduction
 		sea_travel_danger = medium_sea_danger_reduction #Still a bit more dangerous since sea travel is more dangerous than coastal sea
 	}
-
+	
 	on_applied_effect = {
 		hidden_effect = {
-			if = { # No reason to character bloat for every AI
+			if = { # No reason to character bloat for the AI
 				limit = {
-					OR = {
-						is_ai = no
-						highest_held_title_tier >= tier_kingdom
-					}
+					is_ai = no
 				}
 				# Try to find a pool character with the Forder trait
 				if = {
@@ -521,7 +534,7 @@ experienced_captains_option = {
 		}
 		custom_tooltip = captain_recruited.tt
 	}
-
+	
 	ai_will_do = {
 		value = 0
 		if = {
@@ -565,18 +578,34 @@ hire_experienced_mercenaries_option = {
 			}
 		}
 	}
-
+	
 	cost = {
 		gold = {
-			add = {
-				value = high_travel_option_cost
-				if = {
-					limit = {
-						government_has_flag = government_is_nomadic
-					}
-					multiply = 0.5
+			if = {
+				limit = {
+					has_treasury = no
 				}
-				desc = hire_experienced_mercenaries_option
+				add = {
+					value = high_travel_option_cost
+					if = {
+						limit = {
+							government_has_flag = government_is_nomadic
+						}
+						multiply = 0.5
+					}
+					desc = hire_experienced_mercenaries_option
+				}
+			}
+		}
+		treasury = {
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = {
+					value = high_travel_option_cost
+					desc = hire_experienced_mercenaries_option
+				}
 			}
 		}
 		herd = {
@@ -591,12 +620,12 @@ hire_experienced_mercenaries_option = {
 			}
 		}
 	}
-
+	
 	travel_modifier = {
 		travel_speed = 10
 		travel_safety = 20
 	}
-
+	
 	on_applied_effect = {
 		hidden_effect = {
 			random_mercenary_company = {
@@ -618,11 +647,11 @@ hire_experienced_mercenaries_option = {
 					save_scope_as = mercenary_leader
 				}
 			}
-
+			
 			scope:mercenary_leader = {
 				add_gold = root.high_travel_option_cost
 			}
-
+			
 			if = { # No reason to steal too many Mercenaries away for travels; players and AI kings+ only
 				limit = {
 					OR = {
@@ -642,7 +671,7 @@ hire_experienced_mercenaries_option = {
 		}
 		custom_tooltip = mercenary_leader_recruited.tt
 	}
-
+	
 	ai_will_do = {
 		value = 0
 		if = {
@@ -677,18 +706,34 @@ hire_jungle_expert_option = {
 
 	is_valid = {
 	}
-
+	
 	cost = {
 		gold = {
-			add = {
-				value = low_travel_option_cost
-				if = {
-					limit = {
-						government_has_flag = government_is_nomadic
-					}
-					multiply = 0.5
+			if = {
+				limit = {
+					has_treasury = no
 				}
-				desc = hire_jungle_expert_option
+				add = {
+					value = low_travel_option_cost
+					if = {
+						limit = {
+							government_has_flag = government_is_nomadic
+						}
+						multiply = 0.5
+					}
+					desc = hire_jungle_expert_option
+				}
+			}
+		}
+		treasury = {
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = {
+					value = low_travel_option_cost
+					desc = hire_jungle_expert_option
+				}
 			}
 		}
 		herd = {
@@ -710,7 +755,7 @@ hire_jungle_expert_option = {
 		minorroad_jungle_travel_danger = minorroad_jungle_medium_danger_reduction
 		majorroad_jungle_travel_danger = majorroad_jungle_medium_danger_reduction
 	}
-
+	
 	on_applied_effect = {
 		hidden_effect = {
 			if = { # No reason to steal too many Mercenaries away for travels; players and AI kings+ only
@@ -781,7 +826,10 @@ hire_jungle_expert_option = {
 					}
 				}
 				# else create a character
-				else = {
+				else_if = {
+					limit = {
+						is_ai = no
+					}
 					create_character = {
 						location = root.location
 						template = jungle_guide
@@ -810,7 +858,7 @@ hire_jungle_expert_option = {
 		}
 		custom_tooltip = jungle_stalker_recruited.tt
 	}
-
+	
 	ai_will_do = {
 		value = 0
 		if = {
@@ -840,18 +888,34 @@ hire_mountaineer_option = {
 
 	is_valid = {
 	}
-
+	
 	cost = {
 		gold = {
-			add = {
-				value = low_travel_option_cost
-				if = {
-					limit = {
-						government_has_flag = government_is_nomadic
-					}
-					multiply = 0.5
+			if = {
+				limit = {
+					has_treasury = no
 				}
-				desc = hire_mountaineer_option
+				add = {
+					value = low_travel_option_cost
+					if = {
+						limit = {
+							government_has_flag = government_is_nomadic
+						}
+						multiply = 0.5
+					}
+					desc = hire_mountaineer_option
+				}
+			}
+		}
+		treasury = {
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = {
+					value = low_travel_option_cost
+					desc = hire_mountaineer_option
+				}
 			}
 		}
 		herd = {
@@ -888,7 +952,7 @@ hire_mountaineer_option = {
 		majorroad_highlands_travel_danger = majorroad_highlands_medium_danger_reduction
 		minorroad_highlands_travel_danger = minorroad_highlands_medium_danger_reduction
 	}
-
+	
 	on_applied_effect = {
 		hidden_effect = {
 			if = { # No reason to steal too many Mercenaries away for travels; players and AI kings+ only
@@ -956,7 +1020,10 @@ hire_mountaineer_option = {
 						save_scope_as = new_guide
 					}
 				}
-				else = {
+				else_if = {
+					limit = {
+						is_ai = no
+					}
 					create_character = {
 						location = root.location
 						template = mountaineer_guide
@@ -985,7 +1052,7 @@ hire_mountaineer_option = {
 		}
 		custom_tooltip = mountaineer_recruited.tt
 	}
-
+	
 	ai_will_do = {
 		value = 0
 		if = {
@@ -1025,18 +1092,34 @@ hire_forder_option = {
 	is_valid = {
 		is_playable_character = yes
 	}
-
+	
 	cost = {
 		gold = {
-			add = {
-				value = low_travel_option_cost
-				if = {
-					limit = {
-						government_has_flag = government_is_nomadic
-					}
-					multiply = 0.5
+			if = {
+				limit = {
+					has_treasury = no
 				}
-				desc = hire_forder_option
+				add = {
+					value = low_travel_option_cost
+					if = {
+						limit = {
+							government_has_flag = government_is_nomadic
+						}
+						multiply = 0.5
+					}
+					desc = hire_forder_option
+				}
+			}
+		}
+		treasury = {
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = {
+					value = low_travel_option_cost
+					desc = hire_forder_option
+				}
 			}
 		}
 		herd = {
@@ -1064,7 +1147,7 @@ hire_forder_option = {
 		majorroad_the_bog_travel_danger = majorroad_the_bog_medium_danger_reduction
 		minorroad_the_bog_travel_danger = minorroad_the_bog_medium_danger_reduction
 	}
-
+	
 	on_applied_effect = {
 		hidden_effect = {
 			if = { # No reason to steal too many Mercenaries away for travels; players and AI kings+ only
@@ -1132,7 +1215,10 @@ hire_forder_option = {
 						save_scope_as = new_guide
 					}
 				}
-				else = {
+				else_if = {
+					limit = {
+						is_ai = no
+					}
 					create_character = {
 						location = root.location
 						template = forder_guide
@@ -1161,7 +1247,7 @@ hire_forder_option = {
 		}
 		custom_tooltip = forder_recruited.tt
 	}
-
+	
 	ai_will_do = {
 		value = 0
 		if = {
@@ -1196,18 +1282,34 @@ hire_desert_warrior_option = {
 
 	is_valid = {
 	}
-
+	
 	cost = {
 		gold = {
-			add = {
-				value = low_travel_option_cost
-				if = {
-					limit = {
-						government_has_flag = government_is_nomadic
-					}
-					multiply = 0.5
+			if = {
+				limit = {
+					has_treasury = no
 				}
-				desc = hire_desert_warrior_option
+				add = {
+					value = low_travel_option_cost
+					if = {
+						limit = {
+							government_has_flag = government_is_nomadic
+						}
+						multiply = 0.5
+					}
+					desc = hire_desert_warrior_option
+				}
+			}
+		}
+		treasury = {
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = {
+					value = low_travel_option_cost
+					desc = hire_desert_warrior_option
+				}
 			}
 		}
 		herd = {
@@ -1235,7 +1337,7 @@ hire_desert_warrior_option = {
 		majorroad_drylands_travel_danger = majorroad_drylands_medium_danger_reduction
 		minorroad_drylands_travel_danger = minorroad_drylands_medium_danger_reduction
 	}
-
+	
 	on_applied_effect = {
 		hidden_effect = {
 			if = { # No reason to steal too many Mercenaries away for travels; players and AI kings+ only
@@ -1303,7 +1405,10 @@ hire_desert_warrior_option = {
 						save_scope_as = new_guide
 					}
 				}
-				else = {
+				else_if = {
+					limit = {
+						is_ai = no
+					}
 					create_character = {
 						location = root.location
 						template = desert_warrior_guide
@@ -1332,7 +1437,7 @@ hire_desert_warrior_option = {
 		}
 		custom_tooltip = desert_warrior_recruited.tt
 	}
-
+	
 	ai_will_do = {
 		value = 0
 		if = {
@@ -1368,18 +1473,34 @@ hire_rough_terrain_expert_option = {
 
 	is_valid = {
 	}
-
+	
 	cost = {
 		gold = {
-			add = {
-				value = low_travel_option_cost
-				if = {
-					limit = {
-						government_has_flag = government_is_nomadic
-					}
-					multiply = 0.5
+			if = {
+				limit = {
+					has_treasury = no
 				}
-				desc = hire_rough_terrain_expert_option
+				add = {
+					value = low_travel_option_cost
+					if = {
+						limit = {
+							government_has_flag = government_is_nomadic
+						}
+						multiply = 0.5
+					}
+					desc = hire_rough_terrain_expert_option
+				}
+			}
+		}
+		treasury = {
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = {
+					value = low_travel_option_cost
+					desc = hire_rough_terrain_expert_option
+				}
 			}
 		}
 		herd = {
@@ -1410,7 +1531,7 @@ hire_rough_terrain_expert_option = {
 		majorroad_taiga_bog_travel_danger = majorroad_taiga_bog_medium_danger_reduction
 		minorroad_taiga_bog_travel_danger = minorroad_taiga_bog_medium_danger_reduction
 	}
-
+	
 	on_applied_effect = {
 		hidden_effect = {
 			if = { # No reason to steal too many Mercenaries away for travels; players and AI kings+ only
@@ -1478,7 +1599,10 @@ hire_rough_terrain_expert_option = {
 						save_scope_as = new_guide
 					}
 				}
-				else = {
+				else_if = {
+					limit = {
+						is_ai = no
+					}
 					create_character = {
 						location = root.location
 						template = rough_terrain_guide
@@ -1507,7 +1631,7 @@ hire_rough_terrain_expert_option = {
 		}
 		custom_tooltip = rough_terrain_expert_recruited.tt
 	}
-
+	
 	ai_will_do = {
 		value = 0
 		if = {
@@ -1566,15 +1690,31 @@ court_physician_option = {
 	}
 	cost = {
 		gold = {
-			add = {
-				value = low_travel_option_cost
-				if = {
-					limit = {
-						government_has_flag = government_is_nomadic
-					}
-					multiply = 0.5
+			if = {
+				limit = {
+					has_treasury = no
 				}
-				desc = court_physician_option
+				add = {
+					value = low_travel_option_cost
+					if = {
+						limit = {
+							government_has_flag = government_is_nomadic
+						}
+						multiply = 0.5
+					}
+					desc = court_physician_option
+				}
+			}
+		}
+		treasury = {
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = {
+					value = low_travel_option_cost
+					desc = court_physician_option
+				}
 			}
 		}
 		herd = {
@@ -1614,18 +1754,34 @@ cultural_ambassador_option = {
 
 	is_valid = {
 	}
-
+	
 	cost = {
 		gold = {
-			add = {
-				value = low_travel_option_cost
-				if = {
-					limit = {
-						government_has_flag = government_is_nomadic
-					}
-					multiply = 0.5
+			if = {
+				limit = {
+					has_treasury = no
 				}
-				desc = cultural_ambassador_option
+				add = {
+					value = medium_travel_option_cost
+					if = {
+						limit = {
+							government_has_flag = government_is_nomadic
+						}
+						multiply = 0.5
+					}
+					desc = cultural_ambassador_option
+				}
+			}
+		}
+		treasury = {
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = {
+					value = medium_travel_option_cost
+					desc = cultural_ambassador_option
+				}
 			}
 		}
 		herd = {
@@ -1640,7 +1796,7 @@ cultural_ambassador_option = {
 			}
 		}
 	}
-
+	
 	on_applied_effect = {
 		hidden_effect = {
 			if = { # No reason to steal too many Mercenaries away for travels; players and AI kings+ only
@@ -1676,7 +1832,10 @@ cultural_ambassador_option = {
 						save_scope_as = new_guide
 					}
 				}
-				else = {
+				else_if = {
+					limit = {
+						is_ai = no
+					}
 					create_character = {
 						location = root.location
 						template = cultural_ambassador
@@ -1711,7 +1870,7 @@ cultural_ambassador_option = {
 		}
 		custom_tooltip = cultural_ambassador_recruited.tt
 	}
-
+	
 	ai_will_do = {
 		value = 0
 		if = {
@@ -1719,7 +1878,7 @@ cultural_ambassador_option = {
 				any_future_path_location = {
 					count >= 3
 					exists = county
-					NOT = { culture = root.travel_plan_owner.culture }
+					culture != root.travel_plan_owner.culture
 				}
 			}
 			add = {
@@ -1737,7 +1896,28 @@ cultural_ambassador_option = {
 		if = {
 			limit = {
 				travel_plan_owner = {
-					is_landless_adventurer = yes
+					has_government = landless_adventurer_government
+				}
+			}
+			add = {
+				value = -500
+			}
+		}
+		if = {
+			limit = {
+				travel_plan_owner = {
+					exists = capital_province #Unop ck3-tiger Use correct scope
+					NOT = {
+						any_pool_character = {
+							province = root.travel_plan_owner.capital_province #Unop ck3-tiger Use correct scope
+							is_available_ai_adult = yes
+							has_no_particular_noble_roots_trigger = yes
+							age >= 30
+							age <= 55
+							is_married = no
+							diplomacy > 8
+						}
+					}
 				}
 			}
 			add = {
@@ -1756,12 +1936,12 @@ hire_allied_mercenaries_option = {
 	is_valid = {
 		has_perk = mercenary_contacts_perk
 	}
-
+	
 	travel_modifier = {
 		travel_speed = 5
 		travel_safety = 5
 	}
-
+	
 	ai_will_do = {
 		value = 100
 	}
@@ -1856,8 +2036,7 @@ tutor_child_option = {
 		hidden_effect = {
 			if = {
 				limit = {
-					exists = player_heir
-					player_heir = {
+					player_heir ?= {
 						age < 15
 						location = root.location
 					}
@@ -1878,7 +2057,7 @@ tutor_child_option = {
 			custom_tooltip = child_brought_along.tt
 		}
 	}
-
+	
 	ai_will_do = {
 		value = 1
 	}
@@ -2065,7 +2244,7 @@ estate_mounts_option = {
 	travel_modifier = {
 		travel_speed = 10
 	}
-
+	
 	owner_modifier = {
 		travel_companion_opinion = 10
 		monthly_prestige = 1

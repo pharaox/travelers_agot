@@ -5,18 +5,3 @@
 	min = define:NTravel|TRAVEL_DANGER_MINIMUM
 	max = 100
 }
-
-travl_prisoner_event_chance_value = {
-	if = {
-		limit = { has_game_rule = travl_prisoner_event_chance_low }
-		value = 2
-	}
-	else_if = {
-		limit = { has_game_rule = travl_prisoner_event_chance_medium }
-		value = 5
-	}
-	else_if = {
-		limit = { has_game_rule = travl_prisoner_event_chance_high }
-		value = 10
-	}
-}
