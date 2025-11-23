@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 0.8.1
+
+### Compatibility
+
+* Renamed `zzz_travl_00_rules.txt` to `aaa_travl_00_rules.txt` for better compatibility with other mods.
+
 ## Version 0.8.0
 
 * Adapted to CK3 1.18.1 and AGOT 0.4.17.
